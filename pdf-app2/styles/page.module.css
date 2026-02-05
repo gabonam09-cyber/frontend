@@ -1,0 +1,97 @@
+.page {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+/* 📦 CUADROS */
+.box {
+  border: 2px solid #ffffff;
+  border-radius: 12px;
+  padding: 1.5rem;
+}
+
+/* 🔹 TÍTULOS */
+.boxTitle {
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+/* 📤 UPLOAD */
+.upload {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+/* INPUT */
+.fileInput {
+  flex: 1;
+  padding: 6px;
+}
+
+/* BOTONES */
+.button {
+  padding: 8px 14px;
+  border-radius: 6px;
+  border: 1px solid #ffffff;
+  background: rgb(255, 255, 255);
+  cursor: pointer;
+}
+
+.button:hover {
+  background: #ffffff;
+}
+
+/* 📄 LISTA PDFs */
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+/* 🎛 FILTROS */
+.filters {
+  display: flex;
+  gap: 1rem;
+}
+
+.filterActive {
+  border-color: #ffffff;
+  color: #ffffff;
+}
+
+/* 💬 Q&A */
+.qaForm {
+  display: flex;
+  gap: 0.75rem;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.qaForm select,
+.qaForm input {
+  padding: 8px;
+  border-radius: 6px;
+  border: 1px solid #ffffff;
+}
+
+.qaForm input {
+  flex: 1;
+  min-width: 240px;
+}
+
+.qaError {
+  margin-top: 0.75rem;
+  color: #ffb4b4;
+}
+
+.qaAnswer {
+  margin-top: 1rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.35);
+  padding-top: 1rem;
+}
