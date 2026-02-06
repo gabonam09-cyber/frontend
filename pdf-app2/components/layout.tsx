@@ -20,25 +20,6 @@ export default function Layout({
             </p>
           </div>
         </div>
-
-        <div className={styles.links}>
-          <a
-            className={styles.link}
-            href="https://aiaccelera.com/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            AI Accelera
-          </a>
-          <a
-            className={styles.link}
-            href="https://aceleradoraai.com/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Aceleradora AI
-          </a>
-        </div>
       </header>
 
       <div className={styles.content}>{children}</div>
