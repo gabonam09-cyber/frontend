@@ -9,19 +9,46 @@ export default function Layout({
 }) {
   return (
     <div className={styles.layout}>
-      <h1 className={styles.title}>Basic PDF CRUD App</h1>
-      <p className={styles.subtitle}>
-        By{" "}
-        <a href="https://aiaccelera.com/" target="_blank">
-          AI Accelera
-        </a>{" "}
-        and{" "}
-        <a href="https://aceleradoraai.com/" target="_blank">
-          Aceleradora AI
-        </a>
-      </p>
-      {children}
+      <header className={styles.header}>
+        <div className={styles.brand}>
+          <div className={styles.logo} aria-hidden="true" />
+          <div className={styles.titles}>
+            <h1 className={styles.title}>PDF Studio</h1>
+            <p className={styles.subtitle}>
+              Upload PDFs, organize them, open them instantly, and ask questions
+              with RAG.
+            </p>
+          </div>
+        </div>
+
+        <div className={styles.links}>
+          <a
+            className={styles.link}
+            href="https://aiaccelera.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            AI Accelera
+          </a>
+          <a
+            className={styles.link}
+            href="https://aceleradoraai.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Aceleradora AI
+          </a>
+        </div>
+      </header>
+
+      <div className={styles.content}>{children}</div>
+
+      <footer className={styles.footer}>
+        <span className={styles.footerText}>
+          Tip: PDFs open in a new tab. If Q&amp;A fails, make sure the backend has
+          an OpenAI key configured.
+        </span>
+      </footer>
     </div>
   );
 }
-

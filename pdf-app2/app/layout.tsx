@@ -1,20 +1,22 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Bricolage_Grotesque, Fraunces } from "next/font/google";
 import "./globals.css";
 
-const geistSans = Geist({
+const sans = Bricolage_Grotesque({
   subsets: ["latin"],
-  variable: "--font-geist-sans",
+  variable: "--font-sans",
+  weight: ["400", "500", "600", "700"],
 });
 
-const geistMono = Geist_Mono({
+const display = Fraunces({
   subsets: ["latin"],
-  variable: "--font-geist-mono",
+  variable: "--font-display",
+  weight: ["500", "600", "700"],
 });
 
 export const metadata: Metadata = {
-  title: "PDF CRUD App",
-  description: "Fullstack PDF CRUD with Next.js and FastAPI",
+  title: "PDF Studio",
+  description: "Upload, organize, open, and ask questions about your PDFs.",
 };
 
 export default function RootLayout({
@@ -24,10 +26,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
-        {children}
-      </body>
+      <body className={`${sans.variable} ${display.variable}`}>{children}</body>
     </html>
   );
 }
-
