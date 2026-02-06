@@ -22,7 +22,9 @@ function debounceFn<F extends (...args: any[]) => void>(fn: F, delay: number) {
   };
 }
 
-export const API_URL = "http://127.0.0.1:8000";
+// Backend base URL. In Vercel set NEXT_PUBLIC_API_URL to your Render URL.
+export const API_URL =
+  process.env.NEXT_PUBLIC_API_URL ?? "https://backend-csqu.onrender.com";
 
 
 export default function Page() {
